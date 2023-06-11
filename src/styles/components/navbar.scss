@@ -1,0 +1,7 @@
+@use "../abstracts/index.scss" as *;
+
+.navbar {
+  @include flex-center;
+  background-color: $primary-color;
+  padding: 1rem 0;
+}
