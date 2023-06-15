@@ -16,12 +16,14 @@ const { post } = Astro.props;
 
 import SearchBar from "../components/SearchBar.astro";
 import BlogPostLayout from "../layouts/BlogPostLayout.astro";
+import Nav from "../components/Nav.astro";
 ---
 
 <BlogPostLayout
   title={post.frontmatter.title}
   description={post.frontmatter.description}
 >
+  <Nav />
   <SearchBar />
   <h2>{post.frontmatter.title}</h2>
   <p>
