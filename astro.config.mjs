@@ -10,5 +10,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [sitemap(), mdx(), react()]
+  site: "https://codingterms.net",
+  integrations: [
+    sitemap(), mdx(), react()]
 });

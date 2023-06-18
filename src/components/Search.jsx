@@ -1,5 +1,6 @@
 import Fuse from "fuse.js";
 import { useState } from "react";
+import "../styles/components/searchbar.scss";
 
 const options = {
   keys: ["frontmatter.title", "frontmatter.description", "frontmatter.slug"],
@@ -45,6 +46,7 @@ function Search({ searchList }) {
                                focus:border-blue-500"
           placeholder="Search for a coding term..."
         />
+        <p>Cant find a term? Suggest to be added.</p>
       </div>
 
       {query.length > 1 && (

@@ -1,0 +1,24 @@
+@use "../abstracts/index.scss" as *;
+
+.searchbar {
+  @include flex-center;
+  flex-direction: column;
+  margin: 10rem 0;
+}
+
+.relative {
+  @include flex-center;
+  flex-direction: column;
+  width: 100%;
+
+  > input {
+    width: 30%;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    padding: 0 1rem 0 1rem;
+  }
+
+  > p {
+    margin: 1rem 0 0 0;
+  }
+}

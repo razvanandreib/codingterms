@@ -13,7 +13,7 @@ export type SocialObjects = {
 };
 
 export type SocialIcons = {
-  [socia in SocialMedia]: string;
+  [social in SocialMedia]: string;
 };
 
 export type SocialMedia = "Twitter" | "Github";
