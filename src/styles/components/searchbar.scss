@@ -3,7 +3,7 @@
 .searchbar {
   @include flex-center;
   flex-direction: column;
-  margin: 10rem 0;
+  margin: 8rem 2rem;
 }
 
 .relative {
@@ -12,10 +12,16 @@
   width: 100%;
 
   > input {
-    width: 30%;
+    @include box-shadow;
+    width: 45rem;
+    max-width: 100%;
     height: 2.5rem;
     border-radius: 0.5rem;
     padding: 0 1rem 0 1rem;
+    border: 1px solid $primary-color;
+  }
+  > input::placeholder {
+    text-align: center;
   }
 
   > p {
@@ -25,4 +31,22 @@
 
 .postfound {
   background-color: beige;
+  max-width: 47rem;
+  width: 100%;
+  margin: 1rem 0 0 0;
+
+  > li {
+    list-style-type: none;
+    padding: 1rem;
+    > a {
+      font-size: 1.3rem;
+    }
+    > p {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.found {
+  margin: 1rem;
 }
