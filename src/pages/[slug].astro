@@ -1,6 +1,6 @@
 ---
 export async function getStaticPaths() {
-  const allPosts = await Astro.glob("../posts/*{md,mdx}");
+  const allPosts = await Astro.glob("../posts/terms/*{md,mdx}");
   const posts = allPosts.filter(
     (post) => !post.frontmatter.draft && post.frontmatter.slug
   );
@@ -15,11 +15,11 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 
 import SearchBar from "../components/SearchBar.astro";
-import BlogPostLayout from "../layouts/BlogPostLayout.astro";
+import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav.astro";
 ---
 
-<BlogPostLayout
+<Layout
   title={post.frontmatter.title}
   description={post.frontmatter.description}
 >
@@ -30,4 +30,4 @@ import Nav from "../components/Nav.astro";
     {post.frontmatter.description}
   </p>
   <post.Content />
-</BlogPostLayout>
+</Layout>

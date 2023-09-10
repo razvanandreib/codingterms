@@ -1,4 +1,5 @@
 ---
+layout: 
 title: Hash Map
 slug: Hash Map
 description: Hash Map
