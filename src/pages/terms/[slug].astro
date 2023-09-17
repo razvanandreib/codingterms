@@ -2,8 +2,6 @@
 import "../../styles/components/article.scss";
 
 import Layout from "../../layouts/Layout.astro";
-import Nav from "../../components/Nav.astro";
-import SearchBar from "../../components/SearchBar.astro";
 
 export async function getStaticPaths() {
   const allPosts = await Astro.glob("/src/posts/terms/*.{md,mdx}");
@@ -25,8 +23,6 @@ const { post } = Astro.props;
   title={post.frontmatter.title}
   description={post.frontmatter.description}
 >
-  <Nav />
-  <SearchBar />
   <section class="article-wrapper">
     <article class="article-title">
       <h2>{post.frontmatter.title}</h2>

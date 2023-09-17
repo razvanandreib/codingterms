@@ -8,7 +8,6 @@ import "../styles/global.scss";
 const { title, description } = Astro.props;
 
 import Nav from "../components/Nav.astro";
-import SearchBar from "../components/SearchBar.astro";
 ---
 
 <!DOCTYPE html>
@@ -25,7 +24,6 @@ import SearchBar from "../components/SearchBar.astro";
   </head>
   <body>
     <Nav />
-    <SearchBar />
     <slot />
   </body>
 </html>

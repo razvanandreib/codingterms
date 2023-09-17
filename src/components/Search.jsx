@@ -35,7 +35,9 @@ function Search({ searchList }) {
           onChange={handleOnSearch}
           placeholder="Search for a coding term..."
         />
-        <p>Cant find a term? Suggest to be added.</p>
+        <p>
+          Cant find a term? <a href="/suggestterm">Suggest to be added</a>.
+        </p>
       </div>
 
       {query.length > 1 && (
