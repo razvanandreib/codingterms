@@ -1,8 +1,8 @@
 ---
-layout: 
 title: Hash Map
-slug: Hash Map
-description: Hash Map
+slug: hash-map
+description: A hash map, also known as a hash table or dictionary, is a data structure that stores key-value pairs.
+published: "05.08.2023"
 ---
 
 A hash map, also known as a hash table or dictionary, is a data structure that stores key-value pairs. It provides efficient insertion, deletion, and retrieval operations. The key is used to compute a hash code, which is then mapped to a bucket or slot in the hash map. Each bucket can store multiple key-value pairs. The hash code ensures fast access to the corresponding bucket, allowing for constant-time average complexity for operations like insertion, deletion, and lookup.

@@ -1,10 +1,15 @@
 ---
+import "../../styles/components/article.scss";
+
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/Nav.astro";
+import SearchBar from "../../components/SearchBar.astro";
+
 export async function getStaticPaths() {
-  const allPosts = await Astro.glob("../posts/terms/*.{md,mdx}");
+  const allPosts = await Astro.glob("/src/posts/terms/*.{md,mdx}");
   const posts = allPosts.filter(
     (post) => !post.frontmatter.draft && post.frontmatter.slug
   );
-
   return posts.map((post) => ({
     params: {
       slug: post.frontmatter.slug,
@@ -12,13 +17,8 @@ export async function getStaticPaths() {
     props: { post },
   }));
 }
+
 const { post } = Astro.props;
-
-import "../styles/components/article.scss";
-
-import SearchBar from "../components/SearchBar.astro";
-import Layout from "../layouts/Layout.astro";
-import Nav from "../components/Nav.astro";
 ---
 
 <Layout

@@ -1,0 +1,26 @@
+.article-wrapper {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  > p {
+    font-size: 1.6rem;
+  }
+
+  code {
+    font-size: 1.6rem;
+    margin: 4rem 0 0 0;
+  }
+}
+
+.article-title {
+  > h2 {
+    font-size: 3rem;
+  }
+  > p {
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+}
