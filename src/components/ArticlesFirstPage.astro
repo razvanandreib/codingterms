@@ -1,11 +1,45 @@
 ---
-
+const posts = await Astro.glob("/src/posts/terms/*.{md,mdx}");
+const sortedLatestPosts = posts
+  .sort(
+    (a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date)
+  )
+  .reverse();
 ---
 
 <section class="terms">
   <div class="terms__latest">
-
+    {
+      sortedLatestPosts.map((item) => (
+        <div class="terms__latest-info">
+          <h4>{item.frontmatter.title}</h4>
+          <p>{item.frontmatter.description}</p>
+        </div>
+      ))
+    }
   </div>
   <div class="terms__most-view"></div>
   <div class="terms__resources"></div>
 </section>
+
+<style lang="scss">
+  .terms {
+    max-width: 75rem;
+    margin: 0 auto;
+
+    &__latest {
+      max-width: 25rem;
+      width: 100%;
+
+      &-info {
+        margin-top: 1.2rem;
+        > h4 {
+          font-size: 1.5rem;
+        }
+        > p {
+          font-size: 1.1 rem;
+        }
+      }
+    }
+  }
+</style>
