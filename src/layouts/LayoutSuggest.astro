@@ -3,8 +3,11 @@ export interface Props {
   title: string;
   description: string;
 }
+import "../styles/global.scss";
 
 const { title, description } = Astro.props;
+
+import Nav from "../components/Nav.astro";
 ---
 
 <!DOCTYPE html>
@@ -20,6 +23,7 @@ const { title, description } = Astro.props;
     <link rel="stylesheet" href="/src/styles/global.scss" />
   </head>
   <body>
+    <Nav />
     <slot />
   </body>
 </html>

@@ -26,27 +26,18 @@ function Search({ searchList }) {
 
   return (
     <main className="searchbar">
-      <label
-        htmlFor="search"
-        className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
-      ></label>
+      <label htmlFor="search"></label>
       <div className="relative">
         <input
           type="text"
           id="search"
           value={query}
           onChange={handleOnSearch}
-          className="block w-full p-4 pl-10 text-sm 
-                                text-gray-900 
-                               border border-gray-300
-                               rounded-lg bg-gray-50
-
-                               focus:outline-none
-                               focus:ring-blue-500
-                               focus:border-blue-500"
           placeholder="Search for a coding term..."
         />
-        <p>Cant find a term? Suggest to be added.</p>
+        <p>
+          Cant find a term? <a href="/suggestterm">Suggest to be added</a>.
+        </p>
       </div>
 
       {query.length > 1 && (
@@ -60,15 +51,10 @@ function Search({ searchList }) {
         {posts &&
           posts.map((post) => (
             <li className="py-2">
-              <a
-                className="text-lg text-blue-700 hover:text-blue-900 hover:underline underline-offset-2"
-                href={`/${post.frontmatter.slug}`}
-              >
+              <a href={`/terms/${post.frontmatter.slug}`}>
                 {post.frontmatter.title}
               </a>
-              <p className="text-sm text-gray-800">
-                {post.frontmatter.description}
-              </p>
+              <p>{post.frontmatter.description}</p>
             </li>
           ))}
       </ul>

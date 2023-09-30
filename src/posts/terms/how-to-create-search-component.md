@@ -1,10 +1,10 @@
 ---
-title: AI problems we'll face in a few years 
-slug: ai-problems
-description: AI is a huge problem bro! But it'll help humanity (or maybe destroy it)
+title: How to create search component
+slug: search-component
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+published: "07.08.2023"
+link: /terms/search-component
 ---
-
-## Very specific heading
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum pulvinar etiam non quam. Neque volutpat ac tincidunt vitae semper quis lectus nulla at. At tellus at urna condimentum mattis. Odio morbi quis commodo odio aenean sed adipiscing diam. Mauris pellentesque pulvinar pellentesque habitant. Non blandit massa enim nec dui nunc mattis enim ut. Et egestas quis ipsum suspendisse ultrices. Tincidunt lobortis feugiat vivamus at. Morbi tempus iaculis urna id. Integer malesuada nunc vel risus.
 

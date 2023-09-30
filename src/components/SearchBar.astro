@@ -1,6 +1,6 @@
 ---
 import Search from "./Search";
-const allPosts = await Astro.glob("../posts/*.{md, mdx}");
+const allPosts = await Astro.glob("../posts/terms/*.{md,mdx}");
 const posts = allPosts.filter(
   (post) => !post.frontmatter.draft && post.frontmatter.slug
 );

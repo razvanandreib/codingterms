@@ -7,6 +7,14 @@ const sortedLatestPosts = posts
   .reverse();
 
 import { freeResources } from "../resources";
+const posts = await Astro.glob("/src/posts/terms/*.{md,mdx}");
+const sortedLatestPosts = posts
+  .sort(
+    (a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date)
+  )
+  .reverse();
+
+import { freeResources } from "../resources";
 ---
 
 <section class="terms">
