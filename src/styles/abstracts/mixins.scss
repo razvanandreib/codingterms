@@ -52,8 +52,14 @@
   -webkit-text-fill-color: transparent;
 }
 
+@mixin h2 {
+  font-family: "Nunito", sans-serif;
+  font-size: 2rem;
+  color: $primary-color;
+}
+
 @mixin h4 {
   font-family: "Nunito", sans-serif;
   font-size: 1.4rem;
-  color: blue;
+  color: $primary-color;
 }

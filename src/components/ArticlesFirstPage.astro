@@ -5,39 +5,63 @@ const sortedLatestPosts = posts
     (a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date)
   )
   .reverse();
+
+import { freeResources } from "../resources";
 ---
 
 <section class="terms">
-  <div class="terms__latest">
+  <div class="terms__articles">
+    <h2>Latest Articles</h2>
     {
       sortedLatestPosts.map((item) => (
-        <div class="terms__latest-info">
+        <div class="terms__articles-info">
           <h4>{item.frontmatter.title}</h4>
           <p>{item.frontmatter.description}</p>
+          <a href={item.frontmatter.link}>Read more</a>
+        </div>
+      ))
+    }
+  </div>
+  <div class="terms__articles">
+    <h2>Free resources</h2>
+    {
+      freeResources.map((item) => (
+        <div class="terms__articles-info">
+          <h4>{item.title}</h4>
+          <p>{item.desc}</p>
+          <a href={item.link}>Read more</a>
         </div>
       ))
     }
   </div>
   <div class="terms__most-view"></div>
-  <div class="terms__resources"></div>
 </section>
 
 <style lang="scss">
+  @use "../styles/abstracts/index.scss" as *;
   .terms {
+    @include flex;
+    gap: 3rem;
     max-width: 75rem;
     margin: 0 auto;
 
-    &__latest {
+    &__articles {
       max-width: 25rem;
       width: 100%;
-
+      > h2 {
+        @include h2;
+      }
       &-info {
-        margin-top: 1.2rem;
+        padding-top: 1rem;
         > h4 {
           font-size: 1.5rem;
         }
         > p {
-          font-size: 1.1 rem;
+          font-size: 1.2rem;
+        }
+        > a {
+          color: $secondary-color;
+          font-size: 1.2rem;
         }
       }
     }

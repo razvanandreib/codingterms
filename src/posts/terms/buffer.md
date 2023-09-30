@@ -3,6 +3,7 @@ title: Buffer
 slug: buffer
 description: In programming languages, a buffer refers to a temporary storage area used to hold data while it is being transferred from one location to another or processed.
 published: "05.08.2023"
+link: /terms/buffer
 ---
 
 ## What is a buffer?
