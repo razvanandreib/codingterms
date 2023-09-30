@@ -1,0 +1,71 @@
+---
+const posts = await Astro.glob("/src/posts/terms/*.{md,mdx}");
+const sortedLatestPosts = posts
+  .sort(
+    (a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date)
+  )
+  .reverse();
+
+import { freeResources } from "../resources";
+---
+
+<section class="terms">
+  <div class="terms__articles">
+    <h2>Latest Articles</h2>
+    {
+      sortedLatestPosts.map((item) => (
+        <div class="terms__articles-info">
+          <h4>{item.frontmatter.title}</h4>
+          <p>{item.frontmatter.description}</p>
+          <a href={item.frontmatter.link}>Read more</a>
+        </div>
+      ))
+    }
+  </div>
+  <div class="terms__articles">
+    <h2>Free resources</h2>
+    {
+      freeResources.map((item) => (
+        <div class="terms__articles-info">
+          <h4>{item.title}</h4>
+          <p>{item.desc}</p>
+          <a href={item.link} target="_blank" rel="noopener noreferrer">
+            Read more
+          </a>
+        </div>
+      ))
+    }
+  </div>
+  <div class="terms__most-view"></div>
+</section>
+
+<style lang="scss">
+  @use "../styles/abstracts/index.scss" as *;
+  .terms {
+    @include flex;
+    gap: 3rem;
+    max-width: 75rem;
+    margin: 0 auto;
+
+    &__articles {
+      max-width: 25rem;
+      width: 100%;
+      > h2 {
+        @include h2;
+      }
+      &-info {
+        padding-top: 1rem;
+        > h4 {
+          font-size: 1.5rem;
+        }
+        > p {
+          font-size: 1.2rem;
+        }
+        > a {
+          color: $secondary-color;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+</style>
