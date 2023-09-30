@@ -12,14 +12,8 @@
   width: 100%;
 
   > input {
-<<<<<<< HEAD
-    @include box-shadow;
-    width: 45rem;
-    max-width: 100%;
-=======
     max-width: 75rem;
     width: 100%;
->>>>>>> master
     height: 2.5rem;
     border-radius: 0.5rem;
     padding: 0 1rem 0 1rem;
@@ -35,27 +29,6 @@
 }
 
 .postfound {
-<<<<<<< HEAD
-  background-color: beige;
-  max-width: 47rem;
-  width: 100%;
-  margin: 1rem 0 0 0;
-
-  > li {
-    list-style-type: none;
-    padding: 1rem;
-    > a {
-      font-size: 1.3rem;
-    }
-    > p {
-      font-size: 1.1rem;
-    }
-  }
-}
-
-.found {
-  margin: 1rem;
-=======
   max-width: 75rem;
   width: 100%;
   padding: 0 1rem;
@@ -71,5 +44,4 @@
       font-size: 1.4rem;
     }
   }
->>>>>>> master
 }
