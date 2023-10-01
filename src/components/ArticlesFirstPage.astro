@@ -10,7 +10,7 @@ const sortedLatestPosts = posts
 
 <section class="terms">
   <div class="terms__articles">
-    <h2>Latest Articles</h2>
+    <h2>Latest Terms</h2>
     {
       sortedLatestPosts.map((item) => (
         <div class="terms__articles-info">
@@ -51,6 +51,7 @@ const sortedLatestPosts = posts
       width: 100%;
       > h2 {
         @include h2;
+        border-bottom: 1px solid $primary-color;
       }
       &-info {
         padding-top: 1rem;
