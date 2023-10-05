@@ -1,0 +1,66 @@
+---
+const footerLinks = [
+  {
+    name: "About",
+    link: "/about",
+  },
+  {
+    name: "Suggest",
+    link: "/suggestterm",
+  },
+  {
+    name: "Contact",
+    link: "/contact",
+  },
+];
+---
+
+<footer class="footer-wrapper">
+  <div class="footer">
+    <div class="footer__logo">
+      <img src="/logo/codingtermslogo.png" alt="logo coding terms" />
+      <p>Decode the Language of Programming</p>
+    </div>
+    <div class="footer__links">
+      <h4>Usefull Links</h4>
+      <a href="/about">About</a>
+      <a href="/allterms">All terms</a>
+      <a href="/suugestterm">Suggest Term</a>
+    </div>
+  </div>
+</footer>
+
+<style lang="scss">
+  @use "../styles/abstracts/index.scss" as *;
+  .footer-wrapper {
+    @include flex-center;
+    background-color: $primary-color;
+  }
+
+  .footer {
+    @include flex;
+    max-width: 85rem;
+    width: 100%;
+
+    &__logo {
+      padding: 2rem 1rem;
+      > p {
+        @include footer-para;
+      }
+    }
+
+    &__links {
+      @include flex;
+      flex-direction: column;
+      padding: 2rem 0 0 2rem;
+
+      > h4 {
+        color: $white;
+      }
+
+      > a {
+        @include footer-links;
+      }
+    }
+  }
+</style>

@@ -8,43 +8,53 @@ const sortedLatestPosts = posts
   .reverse();
 ---
 
-<section class="terms">
-  <div class="terms__articles">
-    <h2>Latest Terms</h2>
-    {
-      sortedLatestPosts.map((item) => (
-        <div class="terms__articles-info">
-          <h4>{item.frontmatter.title}</h4>
-          <p>{item.frontmatter.description}</p>
-          <a href={item.frontmatter.link}>Read more</a>
-        </div>
-      ))
-    }
+<section class="terms-wrapper">
+  <div class="terms">
+    <div class="terms__articles">
+      <h2>Latest Terms</h2>
+      {
+        sortedLatestPosts.map((item) => (
+          <div class="terms__articles-info">
+            <h4>{item.frontmatter.title}</h4>
+            <p>{item.frontmatter.description}</p>
+            <a href={item.frontmatter.link}>Read more</a>
+          </div>
+        ))
+      }
+    </div>
+    <div class="terms__articles">
+      <h2>Free resources</h2>
+      {
+        freeResources.map((item) => (
+          <div class="terms__articles-info">
+            <h4>{item.title}</h4>
+            <p>{item.desc}</p>
+            <a href={item.link} target="_blank" rel="noopener noreferrer">
+              Read more
+            </a>
+          </div>
+        ))
+      }
+    </div>
+    <div class="terms__articles">
+      <h2>Most viewed</h2>
+    </div>
   </div>
-  <div class="terms__articles">
-    <h2>Free resources</h2>
-    {
-      freeResources.map((item) => (
-        <div class="terms__articles-info">
-          <h4>{item.title}</h4>
-          <p>{item.desc}</p>
-          <a href={item.link} target="_blank" rel="noopener noreferrer">
-            Read more
-          </a>
-        </div>
-      ))
-    }
-  </div>
-  <div class="terms__most-view"></div>
 </section>
 
 <style lang="scss">
   @use "../styles/abstracts/index.scss" as *;
+
+  .terms-wrapper {
+    @include flex-center;
+  }
   .terms {
     @include flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 3rem;
-    max-width: 75rem;
-    margin: 0 auto;
+    margin: 0 2rem;
+    width: 100%;
 
     &__articles {
       max-width: 25rem;
