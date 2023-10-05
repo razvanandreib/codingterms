@@ -12,10 +12,9 @@ In programming languages, a buffer refers to a temporary storage area used to ho
 
 ## Examples of buffers in:
 
-### C++
+#### C++
 
-<code>
-
+```cpp
 #include <iostream>
 #include <fstream>
 int main() {
@@ -38,13 +37,11 @@ std::ofstream outputFile("output.txt");
     return 0;
 
 }
+```
 
-</code>
+#### Python - using buffer for Network Communication
 
-### Python - using buffer for Network Communication
-
-<code>
-
+```python
 import socket
 
 def receive_data(connection, buffer_size=1024):
@@ -55,12 +52,11 @@ if not chunk:
 break
 data += chunk
 return data
+```
 
-</code>
+#### Java - Reading Input with Buffer Reader
 
-### Java - Reading Input with Buffer Reader
-
-<code>
+```java
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -78,4 +74,4 @@ e.printStackTrace();
 }
 }
 
-</code>
+```
