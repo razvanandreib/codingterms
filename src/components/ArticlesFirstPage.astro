@@ -16,6 +16,7 @@ const sortedLatestPosts = posts
         sortedLatestPosts.map((item) => (
           <div class="terms__articles-info">
             <h4>{item.frontmatter.title}</h4>
+            <p>{item.frontmatter.published}</p>
             <p>{item.frontmatter.description}</p>
             <a href={item.frontmatter.link}>Read more</a>
           </div>
