@@ -1,16 +1,28 @@
 ---
 const footerLinks = [
   {
+    name: "Suggest a Term",
+    link: "/suggestterm",
+  },
+  {
+    name: "All terms",
+    link: "/allterms",
+  },
+  {
     name: "About",
     link: "/about",
   },
   {
-    name: "Suggest",
-    link: "/suggestterm",
-  },
-  {
     name: "Contact",
     link: "/contact",
+  },
+  {
+    name: "Privacy Policy",
+    link: "/privacy",
+  },
+  {
+    name: "Cookies Policy",
+    link: "/cookies",
   },
 ];
 ---
@@ -21,24 +33,32 @@ const footerLinks = [
       <img src="/logo/codingtermslogo.png" alt="logo coding terms" />
       <p>Decode the Language of Programming</p>
     </div>
-    <div class="footer__links">
-      <h4>Usefull Links</h4>
-      <a href="/about">About</a>
-      <a href="/allterms">All terms</a>
-      <a href="/suugestterm">Suggest Term</a>
-    </div>
+    {
+      footerLinks.map((info) => (
+        <div class="footer__links">
+          <a href={info.link}>{info.name}</a>
+        </div>
+      ))
+    }
   </div>
+  <p style="color: #eee; margin-top: 4rem;">Coding Terms @2023</p>
 </footer>
 
 <style lang="scss">
   @use "../styles/abstracts/index.scss" as *;
+
   .footer-wrapper {
     @include flex-center;
+    flex-direction: column;
     background-color: $primary-color;
+    margin-top: 5rem;
+    padding: 3rem 0 3rem 0;
   }
 
   .footer {
     @include flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     max-width: 85rem;
     width: 100%;
 
@@ -50,17 +70,24 @@ const footerLinks = [
     }
 
     &__links {
-      @include flex;
-      flex-direction: column;
-      padding: 2rem 0 0 2rem;
-
-      > h4 {
-        color: $white;
-      }
+      @include flex-center;
+      gap: 2rem;
+      // > h4 {
+      //   @include h4;
+      //   color: $white;
+      //   letter-spacing: 0.5px;
+      // }
 
       > a {
         @include footer-links;
       }
+    }
+  }
+
+  @media (max-width: 700px) {
+    .footer {
+      flex-direction: column;
+      align-items: center;
     }
   }
 </style>

@@ -63,3 +63,16 @@
   font-size: 1.4rem;
   color: $primary-color;
 }
+
+@mixin footer-para {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.3rem;
+  color: $white;
+}
+
+@mixin footer-links {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.3rem;
+  color: $white;
+  padding: 1rem 0 0 0;
+}
