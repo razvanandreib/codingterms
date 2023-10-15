@@ -1,0 +1,15 @@
+---
+export interface Props {
+    header: string;
+    description: string;
+    link: string;
+} 
+
+
+const {header, description, link} = Astro.props;
+---
+
+<div class="post-summary">
+    <a href={link}>{header}</a>
+    <p>{description}</p>
+</div>

@@ -1,6 +1,6 @@
 ---
 import { freeResources } from "../resources";
-const posts = await Astro.glob("/src/posts/terms/*.{md,mdx}");
+const posts = await Astro.glob("../pages/posts/terms/*.{md,mdx}");
 const sortedLatestPosts = posts
   .sort(
     (a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date)

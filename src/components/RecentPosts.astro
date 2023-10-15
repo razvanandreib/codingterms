@@ -1,5 +1,5 @@
 ---
-const posts = await Astro.glob("../posts/terms/*.{md,mdx}");
+const posts = await Astro.glob("../pages/posts/terms/*.{md,mdx}");
 posts.sort(
   (a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date)
 );
