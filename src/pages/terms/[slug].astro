@@ -4,7 +4,7 @@ import "../../styles/components/article.scss";
 import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
-  const allPosts = await Astro.glob("/src/posts/terms/*.{md,mdx}");
+  const allPosts = await Astro.glob("/src/pages/posts/terms/*.{md,mdx}");
   const posts = allPosts.filter(
     (post) => !post.frontmatter.draft && post.frontmatter.slug
   );

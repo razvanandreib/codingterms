@@ -76,3 +76,15 @@
   color: $white;
   padding: 1rem 0 0 0;
 }
+
+@mixin header {
+  font-family: "Nunit", sans-serif;
+  font-size: 1.6rem;
+  color: $primary-color;
+}
+
+@mixin para {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.3rem;
+  color: $primary-color;
+}
