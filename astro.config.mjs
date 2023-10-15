@@ -10,4 +10,9 @@ export default defineConfig({
   integrations: [sitemap(), mdx(), react()],
   output: 'static',
   adapter: vercelStatic(),
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/noop'
+    }
+  }
 });
