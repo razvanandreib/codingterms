@@ -1,11 +1,18 @@
 ---
+import { Image } from "astro:assets";
 import "../styles/components/navbar.scss";
+import { logo } from "../consts";
 ---
 
 <nav class="navbar">
   <div class="navbar__logo">
     <a href="/"
-      ><img src="/logo/codingtermslogo.png" alt="Coding Terms Logo" /></a
+      ><Image
+        src={logo.src}
+        alt={logo.alt}
+        width={logo.width}
+        height={logo.height}
+      /></a
     >
   </div>
 </nav>
