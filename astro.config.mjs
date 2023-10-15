@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, sharpImageService } from 'astro/config';
 import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
@@ -6,8 +6,10 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   image: {
     service: {
-      entrypoint: "astro/assets/services/squoosh"
-    }
+      entrypoint: "astro/assets/services"
+    },
+    service: sharpImageService(),
+    domains: ["astro.build"]
   },
   site: "https://codingterms.net",
   integrations: [
