@@ -5,12 +5,10 @@ import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   image: {
-    service: {
-      entrypoint: "astro/assets/services"
-    },
     service: sharpImageService(),
-    domains: ["astro.build"]
+    domains: ["astro.build"],
   },
+
   site: "https://codingterms.net",
   integrations: [
     sitemap(), mdx(), react()]
