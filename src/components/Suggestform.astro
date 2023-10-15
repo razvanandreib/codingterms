@@ -1,12 +1,20 @@
 ---
+
 ---
 
 <section class="form-wrapper">
+  <div>
+    <h2>Suggest a term</h2>
+    <p>
+      Didnt find a term? Suggest one to us and we will make it part of the site
+    </p>
+  </div>
   <form
     action="https://formsubmit.co/8f3407a14202dd95ee4e1df4a4348a1c"
     method="POST"
   >
-    <input type="text" name="name" />
+    <input type="text" name="name" placeholder="Term name" />
+
     <input
       type="hidden"
       name="_next"
@@ -15,3 +23,44 @@
     <button type="submit">Send</button>
   </form>
 </section>
+
+<style lang="scss">
+  @use "../styles/abstracts/index.scss" as *;
+
+  .form-wrapper {
+    height: calc(100svh - 25.35rem - 4.9rem);
+    @include flex-center;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 40rem;
+    margin: 0 auto;
+
+    > div > h2 {
+      @include h2;
+    }
+    > div > p {
+      @include para;
+    }
+  }
+
+  form {
+    @include flex-center;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    
+    > input {
+      max-width: 36rem;
+      width: 100%;
+      padding: 1rem 2rem;
+    }
+    > button {
+      padding: 0.7rem 5rem;
+      background-color: $secondary-color;
+      color: $white;
+      font-family: "Nunito", sans-serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+  }
+</style>
