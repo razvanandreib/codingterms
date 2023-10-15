@@ -1,40 +1,15 @@
 ---
 import { Image } from "astro:assets";
+import { footerLinks } from "../consts";
+import Logo from "../assets/logo/codingtermslogo.png";
 import { logo } from "../consts";
-
-const footerLinks = [
-  {
-    name: "Suggest a Term",
-    link: "/suggestterm",
-  },
-  {
-    name: "All terms",
-    link: "/allterms",
-  },
-  {
-    name: "About",
-    link: "/about",
-  },
-  {
-    name: "Contact",
-    link: "/contact",
-  },
-  {
-    name: "Privacy Policy",
-    link: "/privacy",
-  },
-  {
-    name: "Cookies Policy",
-    link: "/cookies",
-  },
-];
 ---
 
 <footer class="footer-wrapper">
   <div class="footer">
     <div class="footer__logo">
       <Image
-        src={logo.src}
+        src={Logo}
         alt={logo.alt}
         width={logo.width}
         height={logo.height}

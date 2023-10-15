@@ -1,9 +1,35 @@
 export const SITE_TITLE = "Coding Terms";
 export const SITE_DESCRIPTION = "";
 
-export let logo = {
-  src: "/src/assets/logo/codingtermslogo.png",
+export const logo = {
   alt: "Coding Terms Logo",
   width: 207,
   height: 29,
 };
+
+export const footerLinks = [
+  {
+    name: "Suggest a Term",
+    link: "/suggestterm",
+  },
+  {
+    name: "All terms",
+    link: "/allterms",
+  },
+  {
+    name: "About",
+    link: "/about",
+  },
+  {
+    name: "Contact",
+    link: "/contact",
+  },
+  {
+    name: "Privacy Policy",
+    link: "/privacy",
+  },
+  {
+    name: "Cookies Policy",
+    link: "/cookies",
+  },
+];

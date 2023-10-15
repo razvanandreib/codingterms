@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import "../styles/components/navbar.scss";
+import Logo from "../assets/logo/codingtermslogo.png";
 import { logo } from "../consts";
 ---
 
@@ -8,7 +9,7 @@ import { logo } from "../consts";
   <div class="navbar__logo">
     <a href="/"
       ><Image
-        src={logo.src}
+        src={Logo}
         alt={logo.alt}
         width={logo.width}
         height={logo.height}
