@@ -6,7 +6,7 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   image: {
     service: {
-      entrypoint: "astro/assets/services/noop"
+      entrypoint: "astro/assets/services/squoosh"
     }
   },
   site: "https://codingterms.net",
