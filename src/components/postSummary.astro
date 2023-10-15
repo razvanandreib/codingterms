@@ -1,15 +1,39 @@
 ---
 export interface Props {
-    header: string;
-    description: string;
-    link: string;
-} 
+  header: string;
+  description: string;
+  link: string;
+}
 
-
-const {header, description, link} = Astro.props;
+const { header, description, link } = Astro.props;
 ---
 
 <div class="post-summary">
-    <a href={link}>{header}</a>
-    <p>{description}</p>
+  <a href={link}>{header}</a>
+  <p>{description}</p>
 </div>
+
+<style lang="scss">
+  @use "../styles/abstracts/index.scss" as *;
+
+  .post-summary-wrapper {
+    @include flex;
+    gap: 2rem;
+  }
+
+  .post-summary {
+    max-width: 30rem;
+    width: 100%;
+
+    > a {
+      @include h4;
+      display: block;
+      width: 100%;
+      border-bottom: 1px solid $primary-color;
+    }
+
+    > p {
+      @include para;
+    }
+  }
+</style>

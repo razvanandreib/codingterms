@@ -1,6 +1,7 @@
 import Fuse from "fuse.js";
 import { useState } from "react";
 import "../styles/components/searchbar.scss";
+import React from "react";
 
 const options = {
   keys: ["frontmatter.title", "frontmatter.description", "frontmatter.slug"],
