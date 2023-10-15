@@ -1,15 +1,14 @@
 import { defineConfig } from 'astro/config';
 import mdx from "@astrojs/mdx";
-// https://astro.build/config
-
-// https://astro.build/config
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 
-// https://astro.build/config
-
-// https://astro.build/config
 export default defineConfig({
+  image: {
+    service: {
+      entrypoint: "astro/assets/services/noop"
+    }
+  },
   site: "https://codingterms.net",
   integrations: [
     sitemap(), mdx(), react()]
