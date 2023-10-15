@@ -1,15 +1,13 @@
-import { defineConfig, sharpImageService } from 'astro/config';
+import { defineConfig } from 'astro/config';
 import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
+import vercelStatic from '@astrojs/vercel/static';
 
+// https://astro.build/config
 export default defineConfig({
-  image: {
-    service: sharpImageService(),
-    domains: ["astro.build"],
-  },
-
   site: "https://codingterms.net",
-  integrations: [
-    sitemap(), mdx(), react()]
+  integrations: [sitemap(), mdx(), react()],
+  output: 'static',
+  adapter: vercelStatic(),
 });
