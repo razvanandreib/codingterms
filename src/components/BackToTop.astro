@@ -39,8 +39,6 @@
     return document.documentElement || document.body;
   };
 
-  console.log(scrollContainer);
-
   document.addEventListener("scroll", () => {
     if (scrollContainer().scrollTop > showOnPx) {
       backTopButton.classList.remove("hidden");
