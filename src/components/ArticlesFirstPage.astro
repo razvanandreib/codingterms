@@ -2,7 +2,6 @@
 import { freeResources } from "../resources";
 
 const posts = await Astro.glob("../pages/posts/terms/*.{md,mdx}");
-
 const sortedLatestPosts = posts
   .sort(
     (a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date)
@@ -11,7 +10,6 @@ const sortedLatestPosts = posts
 ---
 
 <section class="terms-wrapper">
-  <a href="" random-post>aaaaa</a>
   <div class="terms">
     <div class="terms__articles">
       <h2>Latest Terms</h2>
@@ -45,15 +43,16 @@ const sortedLatestPosts = posts
 </section>
 
 <script>
-  import { freeResources } from "../resources";
-  console.log(freeResources);
+  // import { freeResources } from "../resources";
 
-  const btn = document.querySelector("[random-post]");
-  btn?.addEventListener("click", function () {
-    let random = Math.floor(Math.random() * 10);
-    btn.getAttribute("href");
-    btn.setAttribute("href", freeResources[random].link);
-  });
+  // const btn = document.querySelector("[random-post]");
+  // btn?.addEventListener("click", function () {
+  //   let min = 0;
+  //   let max = freeResources.length;
+  //   let randomArbitrary = Math.floor(Math.random() * (max - min) + min);
+  //   btn.getAttribute("href");
+  //   btn.setAttribute("href", freeResources[randomArbitrary].link);
+  // });
 </script>
 
 <style lang="scss">

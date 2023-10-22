@@ -14,7 +14,7 @@ export const footerLinks = [
   },
   {
     name: "All terms",
-    link: "/allterms",
+    link: "/terms",
   },
   {
     name: "About",
