@@ -17,6 +17,10 @@ export const footerLinks = [
     link: "/terms",
   },
   {
+    name: "Resources",
+    link: "/resources",
+  },
+  {
     name: "About",
     link: "/about",
   },
