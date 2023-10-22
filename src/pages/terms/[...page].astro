@@ -1,12 +1,10 @@
 ---
 export async function getStaticPaths({ paginate }) {
   const allPosts = await Astro.glob("../posts/terms/*.{md,mdx}");
-  const descPosts = allPosts
-    .sort(
-      (a, b) =>
-        new Date(a.frontmatter.published) - new Date(b.frontmatter.published)
-    )
-    .reverse();
+  const descPosts = allPosts.sort(function (a, b) {
+    a.title < b.title ? 1 : -1;
+  });
+
   return paginate(descPosts, {
     pageSize: 5,
   });
