@@ -1,6 +1,9 @@
 export const SITE_TITLE = "Coding Terms";
 export const SITE_DESCRIPTION = "";
 
+export const contact_title = "Contact - Coding Terms";
+export const contact_description = "Get in touch with us";
+
 export const logo = {
   alt: "Coding Terms Logo",
   width: 207,
