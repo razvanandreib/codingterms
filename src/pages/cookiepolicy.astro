@@ -1,0 +1,17 @@
+---
+import "../styles/components/policies.scss";
+
+import Content from "../assets/cookiepolicy.md";
+import LayoutBasic from "../layouts/LayoutBasic.astro";
+---
+
+<LayoutBasic
+  title="Privacy Policy"
+  description="Policies used by this site for your privacy"
+>
+  <section class="privacy-policy-wrapper">
+    <div class="privacy-policy">
+      <Content />
+    </div>
+  </section>
+</LayoutBasic>

@@ -33,10 +33,10 @@ export const footerLinks = [
   },
   {
     name: "Privacy Policy",
-    link: "/privacy",
+    link: "/privacypolicy",
   },
   {
     name: "Cookies Policy",
-    link: "/cookies",
+    link: "/cookiepolicy",
   },
 ];

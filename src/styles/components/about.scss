@@ -1,0 +1,20 @@
+@use "../abstracts/index.scss" as *;
+
+.about-wrapper {
+  max-width: 80rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.about-info {
+  padding: 0 1rem;
+  > h1 {
+    @include h1;
+  }
+
+  > p {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+  }
+}

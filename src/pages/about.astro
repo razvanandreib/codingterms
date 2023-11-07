@@ -1,35 +1,16 @@
 ---
 import LayoutBasic from "../layouts/LayoutBasic.astro";
 import { SOCIALS } from "../config";
+import Content from "../assets/about.md";
 
-console.log(SOCIALS.active);
+import "../styles/components/about.scss ";
 ---
 
 <LayoutBasic title="About" description="About page of Coding Terms">
   <section class="about-wrapper">
-    <div class="socials"></div>
-
     <div class="about-info">
-      <h2>About</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa sunt
-        excepturi, eos veritatis voluptates praesentium tempore vitae quibusdam
-        sapiente voluptatibus necessitatibus repellendus ad sit dolorum commodi
-        nulla! Maxime quod fugiat quaerat eaque, ipsa vel eligendi odio suscipit
-        delectus unde eum asperiores animi et repudiandae est, corrupti quis
-        dolore, dignissimos mollitia!
-      </p>
+      <Content />
     </div>
+    <div class="socials"></div>
   </section>
 </LayoutBasic>
-
-<style lang="scss">
-  @use "../styles/abstracts/index.scss" as *;
-
-  .about-wrapper {
-    max-width: 80rem;
-    widows: 100%;
-    margin: 0 auto;
-    padding: 4rem 0;
-  }
-</style>

@@ -73,8 +73,19 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@mixin h1 {
+  font-family: "Nunito", sans-serif;
+  font-size: 2.2rem;
+  color: $primary-color;
+}
 
 @mixin h2 {
+  font-family: "Nunito", sans-serif;
+  font-size: 2rem;
+  color: $primary-color;
+}
+
+@mixin h3 {
   font-family: "Nunito", sans-serif;
   font-size: 2rem;
   color: $primary-color;

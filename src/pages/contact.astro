@@ -1,6 +1,16 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import LayoutBasic from "../layouts/LayoutBasic.astro";
 import { contact_title, contact_description } from "../consts";
+
+import ContacForm from "../components/ContactForm.astro";
 ---
 
-<Layout title={contact_title} description={contact_description} />
+<LayoutBasic title={contact_title} description={contact_description}>
+  <ContacForm />
+</LayoutBasic>
+
+<style lang="scss">
+  @use "../styles/abstracts/index.scss" as *;
+
+  
+</style>

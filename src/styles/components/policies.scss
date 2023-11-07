@@ -1,0 +1,25 @@
+@use "../abstracts/index.scss" as *;
+.privacy-policy-wrapper {
+  @include flex-center;
+}
+.privacy-policy {
+  max-width: 100rem;
+
+  > h1 {
+    @include h1;
+    padding-top: 3rem;
+  }
+
+  > h3 {
+    @include h3;
+    padding-top: 1rem;
+  }
+
+  > p,
+  > ul > li {
+    @include para;
+    font-size: 1.6rem;
+    padding-top: 1rem;
+    margin-left: 2rem;
+  }
+}
