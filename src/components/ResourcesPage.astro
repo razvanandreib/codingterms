@@ -1,9 +1,5 @@
 ---
-import { freeResources } from "../resources";
-
-const sortedPost = freeResources.sort(function (a, b) {
-  a.title < b.title ? -1 : 1;
-});
+import { sortedPost } from "../resources";
 ---
 
 <div class="resources-wrapper">
@@ -25,6 +21,10 @@ const sortedPost = freeResources.sort(function (a, b) {
 
 <style lang="scss">
   @use "../styles/abstracts/index.scss" as *;
+
+  .resources-wrapper {
+    height: 100svh;
+  }
 
   .resources-title {
     max-width: 102.4rem;

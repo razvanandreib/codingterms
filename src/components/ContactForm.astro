@@ -3,12 +3,97 @@
 ---
 
 <section class="contact-form-wrapper">
-  <div class="contact-form">
-    <form action="">
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <textarea name="" id="" cols="30" rows="10"></textarea>
-    </form>
+  <div class="contact-form-container">
+    <div class="contact-message">
+      <h4>Send us a message</h4>
+      <p>
+        Got some suggestions on how we can improve or just to say say, both are
+        welcomed
+      </p>
+    </div>
+    <div class="contact-form">
+      <form
+        target="_blank"
+        action="https://www.formsubmit.co/codingterms@okcreative.ro"
+        method="POST"
+      >
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="E-mail Adress" required />
+        <textarea name="message" placeholder="Write your thoughts" required
+        ></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   </div>
 </section>
+
+<style lang="scss">
+  @use "../styles/abstracts/index.scss" as *;
+
+  .contact-form-wrapper {
+    @include flex-center;
+    max-width: 80rem;
+    margin: 4rem auto;
+    height: 100svh;
+  }
+  .contact-form-container {
+    @include flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .contact-form {
+    @include flex;
+    max-width: 40rem;
+    width: 100%;
+
+    > form {
+      @include flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 30rem;
+      width: 100%;
+
+      > input,
+      textarea,
+      button {
+        width: 100%;
+      }
+
+      > input,
+      textarea {
+        all: unset;
+        max-width: 36rem;
+        width: calc(100% - 4rem);
+        padding: 1rem 2rem;
+        border: 1px solid $primary-color;
+        border-radius: 0.5rem;
+      }
+
+      > textarea {
+        height: 20rem;
+      }
+
+      > button {
+        all: unset;
+        cursor: pointer;
+        padding: 0.7rem 5rem;
+        background-color: $secondary-color;
+        color: $white;
+        text-align: center;
+        font-family: "Nunito", sans-serif;
+        font-size: 1.3rem;
+        font-weight: 600;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+
+  .contact-message {
+    max-width: 30rem;
+    width: 100%;
+    > h4 {
+      @include h4;
+      font-size: 2rem;
+    }
+  }
+</style>

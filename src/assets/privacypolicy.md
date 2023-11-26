@@ -56,4 +56,4 @@ At CodingTerms, we take your privacy seriously. This Privacy Policy outlines how
 
 ### **10. Contact Us**
 
-If you have any questions or concerns about this Privacy Policy, please contact us at contact@codingterms.com .
+If you have any questions or concerns about this Privacy Policy, please contact us at codingterms@okcreative.ro .

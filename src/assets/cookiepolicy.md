@@ -44,4 +44,4 @@ We may update this Cookies Policy from time to time to reflect changes in our pr
 
 ### **7. Contact Us**
 
-If you have any questions or concerns about our use of cookies, please contact us at [Your Contact Information].
+If you have any questions or concerns about our use of cookies, please contact us at codingterms@okcreative.ro.

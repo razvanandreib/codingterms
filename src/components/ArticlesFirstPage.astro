@@ -1,12 +1,13 @@
 ---
-import { freeResources } from "../resources";
+import { sortedPost } from "../resources";
 
 const posts = await Astro.glob("../pages/posts/terms/*.{md,mdx}");
 const sortedLatestPosts = posts
   .sort(
-    (a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date)
+    (a, b) =>
+      Date.parse(b.frontmatter.published) - Date.parse(a.frontmatter.published)
   )
-  .reverse();
+  .splice(0, 5);
 ---
 
 <section class="terms-wrapper">
@@ -28,15 +29,17 @@ const sortedLatestPosts = posts
     <div class="terms__articles">
       <h2>Free resources</h2>
       {
-        freeResources.map((item) => (
-          <div class="terms__articles-info">
-            <h4>{item.title}</h4>
-            <p>{item.desc}</p>
-            <a href={item.link} target="_blank" rel="noopener noreferrer">
-              Read more
-            </a>
-          </div>
-        ))
+        sortedPost
+          .map((item) => (
+            <div class="terms__articles-info">
+              <h4>{item.title}</h4>
+              <p>{item.desc}</p>
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                Read more
+              </a>
+            </div>
+          ))
+          .splice(0, 6)
       }
       <a class="view-all" href="/resources">View All</a>
     </div>

@@ -29,4 +29,30 @@ export const freeResources = [
     desc: "Resources for Developers by Developers. Documenting web technologies, including CSS, HTML, and JavaScript, since 2005.",
     link: "https://developer.mozilla.org/en-US/",
   },
+  {
+    title: "Web Dev",
+    desc: "We want to help you build beautiful, accessible, fast, and secure websites that work cross-browser, and for all of your users.",
+    link: "htpps://web.dev",
+  },
+  {
+    title: "W3 Schools",
+    desc: "w3schools is a free online learning platform dedicated to coding and web development. ",
+    link: "htpps://w3schools.com",
+  },
+
+  {
+    title: "Khan Academy",
+    desc: "Build a deep, solid understanding in math, science, and more.",
+    link: "https://www.khanacademy.org",
+  },
+  {
+    title: "Code Wars",
+    desc: "Who said learning to code online couldn’t be fun? Codewars also offers one of the more diverse lists of programming languages.",
+    link: "https://www.codewars.com",
+  },
 ];
+export const sortedPost = freeResources.sort(function (a, b) {
+  let titleA = a.title.toUpperCase();
+  let titleB = b.title.toUpperCase();
+  return titleA < titleB ? -1 : titleA > titleB ? 1 : 0;
+});
