@@ -2,7 +2,7 @@
 title: Recursion
 slug: recursion
 description: Recursion is a powerful programming concept that involves a function calling itself in order to solve a problem.
-published: "09.11.2023"
+published: "2023-11-09"
 link: /terms/recursion
 ---
 

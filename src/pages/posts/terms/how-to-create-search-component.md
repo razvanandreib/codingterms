@@ -2,7 +2,7 @@
 title: How to create search component
 slug: search-component
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-published: "07.08.2023"
+published: "2023-11-15"
 link: /terms/search-component
 ---
 

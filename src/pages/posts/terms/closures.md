@@ -2,7 +2,7 @@
 title: Closures
 slug: closures
 description: Closures are a powerful and versatile concept in programming languages that support functional programming paradigms.
-published: "10.11.2023"
+published: "2023-09-15"
 link: /terms/closures
 ---
 

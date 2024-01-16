@@ -2,7 +2,7 @@
 title: Hash Map
 slug: hash-map
 description: A hash map, also known as a hash table or dictionary, is a data structure that stores key-value pairs.
-published: "06.08.2023"
+published: "2023-08-06"
 link: /terms/hash-map
 ---
 
