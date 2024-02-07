@@ -4,6 +4,8 @@ const allPosts = await Astro.glob("../pages/posts/terms/*.{md,mdx}");
 const posts = allPosts.filter(
   (post) => !post.frontmatter.draft && post.frontmatter.slug
 );
+
+import RandomTerm from "./RandomTerm.astro";
 ---
 
 <Search client:load searchList={posts} />

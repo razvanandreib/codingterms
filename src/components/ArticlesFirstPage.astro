@@ -8,6 +8,8 @@ const sortedLatestPosts = posts
       Date.parse(b.frontmatter.published) - Date.parse(a.frontmatter.published)
   )
   .splice(0, 5);
+
+import RandomTerm from "./RandomTerm.astro";
 ---
 
 <section class="terms-wrapper">
@@ -24,7 +26,10 @@ const sortedLatestPosts = posts
           </div>
         ))
       }
-      <a class="view-all" href="/terms">View All</a>
+      <div class="terms__links">
+        <a class="view-all" href="/terms">View All</a>
+        <RandomTerm />
+      </div>
     </div>
     <div class="terms__articles">
       <h2>Free resources</h2>
@@ -92,6 +97,12 @@ const sortedLatestPosts = posts
           @include read-more;
         }
       }
+    }
+
+    &__links {
+      @include flex;
+      align-items: center;
+      justify-content: space-between;
     }
     .view-all {
       @include view-all;

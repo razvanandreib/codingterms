@@ -51,6 +51,7 @@ export const freeResources = [
     link: "https://www.codewars.com",
   },
 ];
+
 export const sortedPost = freeResources.sort(function (a, b) {
   let titleA = a.title.toUpperCase();
   let titleB = b.title.toUpperCase();
