@@ -1,7 +1,7 @@
 ---
-const allPosts = await Astro.glob("../pages/posts/terms/*.{md,mdx}");
+import { getCollection } from "astro:content";
 
-console.log(allPosts);
+const allPosts = await getCollection("terms");
 
 function random() {
   let min = 0;
@@ -15,7 +15,7 @@ function random() {
 const randomPost = random();
 ---
 
-<a onclick="random()" class="random-post" href={randomPost.frontmatter.link}
+<a onclick="random()" class="random-post" href={randomPost.data.link}
   ><svg
     xmlns="http://www.w3.org/2000/svg"
     width="20"

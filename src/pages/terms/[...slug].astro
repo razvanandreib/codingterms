@@ -1,0 +1,43 @@
+---
+import { getCollection } from "astro:content";
+
+import "../../styles/components/article.scss";
+
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import BackToTop from "../../components/BackToTop.astro";
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection("terms");
+
+  return allPosts.map((entry) => ({
+    params: {
+      slug: entry.slug,
+    },
+    props: {
+      entry,
+    },
+  }));
+}
+
+export const prerender = true;
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Layout title={entry.data.title} description={entry.data.description}>
+  <section class="article-wrapper">
+    <Breadcrumbs
+      home="/"
+      current={entry.data.link}
+      title={entry.data.title}
+      terms="/terms"
+    />
+    <article class="article-title">
+      <h1>{entry.data.title}</h1>
+      <p>{entry.data.published.toLocaleDateString("ro-RO")}</p>
+    </article>
+    <Content />
+    <BackToTop />
+  </section>
+</Layout>

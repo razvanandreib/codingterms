@@ -2,17 +2,16 @@
 title: Algorithm
 slug: algorithm
 description: An algorithm is a step-by-step set of instructions or a well-defined procedure designed to perform a specific task or solve a particular problem.
-published: "2023-08-12"
-link: /terms/algorithm
+published: 2023-08-12
+link: terms/algorithm
+draft: false
 ---
-
-Algorithm:
 
 An algorithm is a step-by-step set of instructions or a well-defined procedure designed to perform a specific task or solve a particular problem. It serves as a blueprint for solving problems and is a fundamental concept in computer science and programming. Algorithms can be expressed in natural language, flowcharts, or programming languages and are used to streamline the process of problem-solving and computation.
 
 Code Examples in Different Languages:
 
-## **Python:**
+#### **Python:**
 
 ```python
 # Example: Bubble Sort Algorithm
@@ -29,7 +28,7 @@ bubble_sort(my_list)
 print("Sorted array:", my_list)
 ```
 
-## **Java:**
+#### **Java:**
 
 ```java
 // Example: Binary Search Algorithm
@@ -59,7 +58,7 @@ public class BinarySearch {
 }
 ```
 
-## **JavaScript:**
+#### **JavaScript:**
 
 ```javascript
 // Example: Factorial Calculation using Recursion

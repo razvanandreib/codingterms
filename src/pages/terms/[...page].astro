@@ -1,6 +1,8 @@
 ---
+import { getCollection } from "astro:content";
+
 export async function getStaticPaths({ paginate }) {
-  const allPosts = await Astro.glob("../posts/terms/*.{md,mdx}");
+  const allPosts = await getCollection("terms");
   const descPosts = allPosts.sort(function (a, b) {
     a.title < b.title ? 1 : -1;
   });
@@ -20,9 +22,9 @@ import Layout from "../../layouts/Layout.astro";
     {
       page.data.map((post) => (
         <PostSummary
-          header={post.frontmatter.title}
-          description={post.frontmatter.description}
-          link={post.frontmatter.link}
+          header={post.data.title}
+          description={post.data.description}
+          link={post.data.link}
         />
       ))
     }

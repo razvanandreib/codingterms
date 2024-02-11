@@ -52,7 +52,7 @@ export const freeResources = [
   },
 ];
 
-export const sortedPost = freeResources.sort(function (a, b) {
+export const sortedResources = freeResources.sort(function (a, b) {
   let titleA = a.title.toUpperCase();
   let titleB = b.title.toUpperCase();
   return titleA < titleB ? -1 : titleA > titleB ? 1 : 0;

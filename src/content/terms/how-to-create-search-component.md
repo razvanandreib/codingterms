@@ -2,8 +2,9 @@
 title: How to create search component
 slug: search-component
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-published: "2023-11-15"
-link: /terms/search-component
+published: 2023-11-15
+link: terms/search-component
+draft: false
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum pulvinar etiam non quam. Neque volutpat ac tincidunt vitae semper quis lectus nulla at. At tellus at urna condimentum mattis. Odio morbi quis commodo odio aenean sed adipiscing diam. Mauris pellentesque pulvinar pellentesque habitant. Non blandit massa enim nec dui nunc mattis enim ut. Et egestas quis ipsum suspendisse ultrices. Tincidunt lobortis feugiat vivamus at. Morbi tempus iaculis urna id. Integer malesuada nunc vel risus.

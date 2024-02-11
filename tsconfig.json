@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "ignoreDeprecations": "5.0",
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "strictNullChecks": true,
+    "allowJs": true
   },
 
   "extends": "astro/tsconfigs/strict"

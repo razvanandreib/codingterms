@@ -1,9 +1,9 @@
 ---
+import { getCollection } from "astro:content";
+
 import Search from "./Search";
-const allPosts = await Astro.glob("../pages/posts/terms/*.{md,mdx}");
-const posts = allPosts.filter(
-  (post) => !post.frontmatter.draft && post.frontmatter.slug
-);
+const allPosts = await getCollection("terms");
+const posts = allPosts.filter((post) => !post.data.draft && post.data.slug);
 
 import RandomTerm from "./RandomTerm.astro";
 ---

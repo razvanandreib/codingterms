@@ -2,11 +2,10 @@
 title: Closures
 slug: closures
 description: Closures are a powerful and versatile concept in programming languages that support functional programming paradigms.
-published: "2023-09-15"
-link: /terms/closures
+published: 2023-09-15
+link: terms/closures
+draft: false
 ---
-
-# Understanding Closures in JavaScript, C++, and Java
 
 Closures are a powerful and versatile concept in programming languages that support functional programming paradigms. They provide a way to create and manage functions with encapsulated variables, allowing for more flexible and modular code. In this article, we'll explore closures in three popular programming languages: JavaScript, C++, and Java.
 

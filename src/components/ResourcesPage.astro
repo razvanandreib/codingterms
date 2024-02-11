@@ -1,5 +1,5 @@
 ---
-import { sortedPost } from "../resources";
+import { sortedResources } from "../resources";
 ---
 
 <div class="resources-wrapper">
@@ -8,11 +8,13 @@ import { sortedPost } from "../resources";
   </div>
   <div class="resources-card-container">
     {
-      sortedPost.map((info) => (
+      sortedResources.map((info) => (
         <div class="resources-card">
           <h4>{info.title}</h4>
           <p>{info.desc}</p>
-          <a href={info.link}>View</a>
+          <a href={info.link} rel="noopener noreferrer" target="_blank">
+            View
+          </a>
         </div>
       ))
     }

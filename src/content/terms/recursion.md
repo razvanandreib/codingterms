@@ -2,15 +2,14 @@
 title: Recursion
 slug: recursion
 description: Recursion is a powerful programming concept that involves a function calling itself in order to solve a problem.
-published: "2023-11-09"
-link: /terms/recursion
+published: 2023-11-09
+link: terms/recursion
+draft: false
 ---
-
-# Recursion
 
 Recursion is a powerful programming concept that involves a function calling itself in order to solve a problem. This elegant technique allows for the implementation of complex algorithms in a concise and efficient manner. In this article, we will delve into the world of recursion in three popular programming languages: JavaScript, C++, and Java.
 
-JavaScript:
+## JavaScript:
 
 JavaScript, being a versatile and widely used language for web development, embraces recursion with its flexible syntax. One common application of recursion in JavaScript is in traversing and manipulating tree-like structures, such as the Document Object Model (DOM) in web pages.
 
@@ -29,7 +28,7 @@ console.log(factorial(5)); // Output: 120
 
 In this example, the `factorial` function calculates the factorial of a number using recursion. The base case (`n <= 1`) ensures that the recursion stops when the input reaches a defined condition.
 
-C++:
+## C++:
 
 C++ is a powerful and low-level programming language that supports recursion, allowing for the implementation of complex algorithms and data structures. Recursion is often used in scenarios where a problem can be broken down into smaller, identical subproblems.
 
@@ -53,7 +52,7 @@ int main() {
 
 The example above demonstrates the calculation of the Fibonacci sequence using recursion. The function `fibonacci` recursively calls itself to calculate the nth Fibonacci number.
 
-Java:
+## Java:
 
 Java, known for its portability and object-oriented nature, also supports recursion. Java's syntax is more structured compared to JavaScript, but the principles of recursion remain the same.
 

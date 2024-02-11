@@ -1,13 +1,15 @@
 ---
-import { sortedPost } from "../resources";
+import { sortedResources } from "../resources";
+import { getCollection } from "astro:content";
 
-const posts = await Astro.glob("../pages/posts/terms/*.{md,mdx}");
+const posts = await getCollection("terms");
+
 const sortedLatestPosts = posts
-  .sort(
-    (a, b) =>
-      Date.parse(b.frontmatter.published) - Date.parse(a.frontmatter.published)
-  )
-  .splice(0, 5);
+  .sort((a, b) => Date.parse(b.data.published) - Date.parse(a.data.published))
+  .splice(0, 5)
+  .filter((info) => !info.data.draft);
+
+// const filteredPosts = sortedLatestPosts.filter((info) => !info.data.draft);
 
 import RandomTerm from "./RandomTerm.astro";
 ---
@@ -19,10 +21,10 @@ import RandomTerm from "./RandomTerm.astro";
       {
         sortedLatestPosts.map((item) => (
           <div class="terms__articles-info">
-            <h4>{item.frontmatter.title}</h4>
-            <p>{item.frontmatter.published}</p>
-            <p>{item.frontmatter.description}</p>
-            <a href={item.frontmatter.link}>Read more</a>
+            <h4>{item.data.title}</h4>
+            <p>{item.data.published.toLocaleDateString("ro-RO")}</p>
+            <p>{item.data.description}</p>
+            <a href={item.data.link}>Read more</a>
           </div>
         ))
       }
@@ -34,7 +36,7 @@ import RandomTerm from "./RandomTerm.astro";
     <div class="terms__articles">
       <h2>Free resources</h2>
       {
-        sortedPost
+        sortedResources
           .map((item) => (
             <div class="terms__articles-info">
               <h4>{item.title}</h4>
