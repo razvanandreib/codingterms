@@ -1,6 +1,9 @@
 ---
 import { getCollection } from "astro:content";
 
+import PostSummary from "../../components/postSummary.astro";
+import Layout from "../../layouts/Layout.astro";
+
 export async function getStaticPaths({ paginate }) {
   const allPosts = await getCollection("terms");
   const descPosts = allPosts.sort(function (a, b) {
@@ -13,11 +16,24 @@ export async function getStaticPaths({ paginate }) {
 }
 const { page } = Astro.props;
 
-import PostSummary from "../../components/postSummary.astro";
-import Layout from "../../layouts/Layout.astro";
+var indexArr: any = [];
+
+for (var i = 97; i <= 122; i++) {
+  indexArr.push(String.fromCharCode(i).toUpperCase());
+}
 ---
 
-<Layout>
+<Layout title={page.data.title} description={page.data.description}>
+  <section class="index">
+    {
+      indexArr.map((info) => (
+        <div class="index__links">
+          <a onclick="">{info}</a>
+        </div>
+      ))
+    }
+  </section>
+
   <section class="post-summary-wrapper">
     {
       page.data.map((post) => (
@@ -38,5 +54,19 @@ import Layout from "../../layouts/Layout.astro";
     justify-content: center;
     gap: 3rem;
     padding: 0 2rem;
+  }
+
+  .index {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1rem 6rem 1rem;
+    display: flex;
+
+    &__links {
+      > a {
+        font-size: 1.6rem;
+        padding: 0 1rem 0 0;
+      }
+    }
   }
 </style>
