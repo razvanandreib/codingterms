@@ -9,13 +9,11 @@ function random() {
 
   const randomNumber = Math.floor(Math.random() * (max - min) + min);
 
-  return allPosts[randomNumber];
+  return allPosts[randomNumber].data.link;
 }
-
-const randomPost = random();
 ---
 
-<a onclick="random()" class="random-post" href={randomPost.data.link}
+<a class="random-post" href={`${random()}`}
   ><svg
     xmlns="http://www.w3.org/2000/svg"
     width="20"
