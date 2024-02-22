@@ -9,11 +9,15 @@ function random() {
 
   const randomNumber = Math.floor(Math.random() * (max - min) + min);
 
-  return allPosts[randomNumber].data.link;
+window.location.href =  allPosts[randomNumber].data.link;
+
+  return false;
+
+  //return allPosts[randomNumber].data.link;
 }
 ---
 
-<a class="random-post" href={`${random()}`}
+<button onclick="random()" class="random-post"}
   ><svg
     xmlns="http://www.w3.org/2000/svg"
     width="20"
@@ -30,5 +34,5 @@ function random() {
       d="M2 6h1.9c1.5 0 2.9.9 3.6 2.2"></path><path
       d="M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8"></path><path
       d="m18 14 4 4-4 4"></path></svg
-  ></a
+  ></button
 >
