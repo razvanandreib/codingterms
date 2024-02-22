@@ -1,21 +1,4 @@
----
-import { getCollection } from "astro:content";
 
-const allPosts = await getCollection("terms");
-
-function random() {
-  let min = 0;
-  let max = allPosts.length;
-
-  const randomNumber = Math.floor(Math.random() * (max - min) + min);
-
-return window.location.href =  allPosts[randomNumber].data.link;
-
- // return false;
-
-  //return allPosts[randomNumber].data.link;
-}
----
 
 <button onclick="random()" class="random-post"}
   ><svg
@@ -36,3 +19,24 @@ return window.location.href =  allPosts[randomNumber].data.link;
       d="m18 14 4 4-4 4"></path></svg
   ></button
 >
+
+<script>
+
+
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("terms");
+
+function random() {
+  let min = 0;
+  let max = allPosts.length;
+
+  const randomNumber = Math.floor(Math.random() * (max - min) + min);
+
+return window.location.href =  allPosts[randomNumber].data.link;
+
+ // return false;
+
+  //return allPosts[randomNumber].data.link;
+}
+</script>
