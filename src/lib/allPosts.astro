@@ -1,0 +1,8 @@
+---
+import { getCollection } from "astro:content";
+
+export let allPosts = await getCollection("terms");
+document.querySelector(".random-post")?.addEventListener("click", function () {
+  console.log("hello");
+});
+---
