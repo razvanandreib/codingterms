@@ -4,7 +4,7 @@ import "../styles/components/searchbar.scss";
 import React from "react";
 
 const options = {
-  keys: ["frontmatter.title", "frontmatter.description", "frontmatter.slug"],
+  keys: ["data.title", "data.description", "data.link"],
   includeMatches: true,
   minMatchCharlength: 2,
   threshold: 0.5,
@@ -52,10 +52,8 @@ function Search({ searchList }) {
         {posts &&
           posts.map((post) => (
             <li className="py-2">
-              <a href={`/terms/${post.frontmatter.slug}`}>
-                {post.frontmatter.title}
-              </a>
-              <p>{post.frontmatter.description}</p>
+              <a href={`${post.data.link}`}>{post.data.title}</a>
+              <p>{post.data.description}</p>
             </li>
           ))}
       </ul>

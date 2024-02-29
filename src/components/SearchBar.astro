@@ -3,9 +3,7 @@ import { getCollection } from "astro:content";
 
 import Search from "./Search";
 const allPosts = await getCollection("terms");
-const posts = allPosts.filter((post) => !post.data.draft && post.data.slug);
-
-import RandomTerm from "./RandomTerm.astro";
+const posts = allPosts.filter((post) => !post.data.draft && post.data.link);
 ---
 
 <Search client:load searchList={posts} />

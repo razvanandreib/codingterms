@@ -1,6 +1,7 @@
 ---
 import { sortedResources } from "../resources";
 import { getCollection } from "astro:content";
+import RandomTerms from "./RandomTerms";
 
 const posts = await getCollection("terms");
 
@@ -11,7 +12,7 @@ const sortedLatestPosts = posts
 
 // const filteredPosts = sortedLatestPosts.filter((info) => !info.data.draft);
 
-import RandomTerm from "./RandomTerm.astro";
+// import RandomTerm from "./RandomTerm.astro";
 ---
 
 <section class="terms-wrapper">
@@ -30,7 +31,7 @@ import RandomTerm from "./RandomTerm.astro";
       }
       <div class="terms__links">
         <a class="view-all" href="/terms">View All</a>
-        <RandomTerm />
+        <RandomTerms client:load />
       </div>
     </div>
     <div class="terms__articles">
