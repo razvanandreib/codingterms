@@ -10,6 +10,7 @@ function RandomTerms() {
       const posts = await getCollection("terms");
       console.log(posts);
       setAllPosts(posts);
+      console.log(setAllPosts(posts));
     };
 
     fetchPosts();
@@ -28,6 +29,7 @@ function RandomTerms() {
     window.location.href = allPosts[randomNumber].data.link;
   };
   console.log(random());
+
   return (
     <button type="button" onClick={random} className="random-post">
       <svg
