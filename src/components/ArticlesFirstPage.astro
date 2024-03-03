@@ -1,7 +1,6 @@
 ---
 import { sortedResources } from "../resources";
 import { getCollection } from "astro:content";
-import RandomTerms from "./RandomTerms";
 
 const posts = await getCollection("terms");
 
@@ -29,7 +28,6 @@ const sortedLatestPosts = posts
       }
       <div class="terms__links">
         <a class="view-all" href="/terms">View All</a>
-        <RandomTerms client:load />
       </div>
     </div>
     <div class="terms__articles">
@@ -51,19 +49,6 @@ const sortedLatestPosts = posts
     </div>
   </div>
 </section>
-
-<script>
-  // import { freeResources } from "../resources";
-
-  // const btn = document.querySelector("[random-post]");
-  // btn?.addEventListener("click", function () {
-  //   let min = 0;
-  //   let max = freeResources.length;
-  //   let randomArbitrary = Math.floor(Math.random() * (max - min) + min);
-  //   btn.getAttribute("href");
-  //   btn.setAttribute("href", freeResources[randomArbitrary].link);
-  // });
-</script>
 
 <style lang="scss">
   @use "../styles/abstracts/index.scss" as *;
@@ -110,3 +95,18 @@ const sortedLatestPosts = posts
     }
   }
 </style>
+
+<script>
+  let random = () => {
+    let min = 0;
+    let max = allPosts.length;
+
+    const randomNumber = Math.floor(Math.random() * (max - min) + min);
+
+    return (window.location.href = allPosts[randomNumber].data.link);
+
+    // return false;
+
+    //return allPosts[randomNumber].data.link;
+  };
+</script>
