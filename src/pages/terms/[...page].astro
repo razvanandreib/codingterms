@@ -16,15 +16,16 @@ export async function getStaticPaths({ paginate }) {
 }
 const { page } = Astro.props;
 
-var indexArr: any = [];
+// all letters
+// var indexArr: any = [];
 
-for (var i = 97; i <= 122; i++) {
-  indexArr.push(String.fromCharCode(i).toUpperCase());
-}
+// for (var i = 97; i <= 122; i++) {
+//   indexArr.push(String.fromCharCode(i).toUpperCase());
+// }
 ---
 
 <Layout title={page.data.title} description={page.data.description}>
-  <section class="index">
+  <!-- <section class="index">
     {
       indexArr.map((info) => (
         <div class="index__links">
@@ -32,7 +33,7 @@ for (var i = 97; i <= 122; i++) {
         </div>
       ))
     }
-  </section>
+  </section> -->
 
   <section class="post-summary-wrapper">
     {
